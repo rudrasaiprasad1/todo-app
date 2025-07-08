@@ -1,7 +1,12 @@
 const Header = () => {
   return (
     <>
-      <div>Header</div>
+      <div>
+        <ul>
+          <li>Home</li>
+          <li>Login</li>
+        </ul>
+      </div>
     </>
   );
 };
