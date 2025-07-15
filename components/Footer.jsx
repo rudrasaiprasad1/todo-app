@@ -7,7 +7,7 @@ const Footer = () => {
             <div>made with love 💖 by RSP</div>
             <div>
               contact me :
-              <a href="https://rsp25.netlify.app" target="_top">
+              <a href="https://rsp25.netlify.app" target="_blank">
                 rsp25.netlify.app
               </a>
             </div>
