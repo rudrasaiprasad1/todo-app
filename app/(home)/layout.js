@@ -30,13 +30,9 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="flex flex-col  min-h-screen relative bg-slate-900">
-        <Header />
         <main>
           <div className="flex-1">{children}</div>
         </main>
-        <Footer />
-        <div id="portal"></div>
-        <div id="portal2"></div>
       </body>
     </html>
   );
