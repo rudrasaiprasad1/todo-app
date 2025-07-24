@@ -1,4 +1,11 @@
-import Head from "../Head";
+import "../globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+export const metadata = {
+  title: "Todo App",
+  description: `Created with 💖 by rsp `,
+};
 
 export default function RootLayout({ children }) {
   return (
