@@ -1,6 +1,6 @@
 const Head = () => {
   return (
-    <>
+    <head>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
         rel="preconnect"
@@ -18,7 +18,7 @@ const Head = () => {
         crossOrigin="anonymous"
         referrerPolicy="no-referrer"
       />
-    </>
+    </head>
   );
 };
 
