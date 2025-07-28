@@ -8,7 +8,7 @@ export const Login = () => {
           placeholder="Email address..."
           className="outline-none text-slate-900 p-2 w-full max-w-[30ch]"
         />
-        <button />
+        <button>Login Button</button>
       </form>
     </div>
   );
