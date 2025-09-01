@@ -5,7 +5,7 @@ export default function RootLayout({ children }) {
   return (
     <>
       <Header />
-      <div className="flex min-h-screen items-center justify-center bg-gray-100">
+      <div className="flex min-h-screen items-center justify-center ">
         <h1 className="text-4xl font-bold text-indigo-600">
           Welcome to Todo App 🚀
         </h1>
