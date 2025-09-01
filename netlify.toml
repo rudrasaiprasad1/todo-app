@@ -7,6 +7,16 @@
   NODE_VERSION = "20"
   NPM_FLAGS = "--legacy-peer-deps"
 
-# Next.js specific plugin
+# ✅ Next.js plugin (required for SSR, API routes, ISR, etc.)
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# ✅ Redirect all traffic to Next.js (so dynamic routes work)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# ✅ Cache settings for faster builds
+[[plugins]]
+  package = "@netlify/plugin-cache-nextjs"
