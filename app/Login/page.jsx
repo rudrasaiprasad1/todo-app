@@ -13,18 +13,15 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-lg">
-        <h2 className="mb-6 text-center text-2xl font-bold text-gray-800">
-          <i className="fa-solid fa-right-to-bracket mr-2"></i>
-          Login
+    <div className="flex min-h-screen items-center justify-center ">
+      <div className="w-full max-w-md rounded-2xl  p-8 ">
+        <h2 className="mb-6 text-center text-2xl font-bold uppercase ">
+          LOGIN
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Email */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Email
-            </label>
+            <label className="block text-sm font-medium ">Email</label>
             <input
               type="email"
               required
@@ -37,9 +34,7 @@ export default function LoginPage() {
 
           {/* Password */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Password
-            </label>
+            <label className="block text-sm font-medium ">Password</label>
             <input
               type="password"
               required

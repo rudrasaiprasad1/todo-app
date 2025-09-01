@@ -7,11 +7,10 @@ export default function RootLayout({ children }) {
       <Header />
       <div className="flex min-h-screen items-center justify-center bg-gray-100">
         <h1 className="text-4xl font-bold text-indigo-600">
-          Welcome to Next.js 🚀
+          Welcome to Todo App 🚀
         </h1>
       </div>
       <div className="flex-1 bg-amber-300">{children}</div>
-      <LoginPage />
       <Footer />
     </>
   );
