@@ -1,4 +1,4 @@
-import CDNLoader from "../components/CDNLoader";
+import CDNLoader from "../../components/CDNLoader";
 export const metadata = {
   title: "Todo App",
   description: `Created with 💖 by rsp `,
