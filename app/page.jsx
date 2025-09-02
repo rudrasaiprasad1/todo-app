@@ -9,8 +9,8 @@ import {
   doc,
   updateDoc,
 } from "firebase/firestore";
-import { useAuth } from "./layout";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/components/AuthProvider";
 
 export default function Home() {
   const { user, logout } = useAuth();

@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 export default function Login() {
   const router = useRouter();
-
+  
   const login = async () => {
     try {
       await signInWithPopup(auth, provider);
@@ -14,7 +14,7 @@ export default function Login() {
       console.error(err);
     }
   };
-
+  
   return (
     <div className="flex h-screen items-center justify-center">
       <button
