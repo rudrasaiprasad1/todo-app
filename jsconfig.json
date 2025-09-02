@@ -1,13 +1,10 @@
 {
   "compilerOptions": {
-    "skipLibCheck": true,
-    "noEmit": true,
     "baseUrl": "./",
     "paths": {
       "@/*": ["*"],
       "@/styles/*": ["styles/*"],
       "@/components/*": ["components/*"]
     }
-  },
-  "exclude": ["node_modules"]
+  }
 }
