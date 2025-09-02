@@ -24,7 +24,7 @@ This project uses Firebase Authentication and Firestore for managing todos. Foll
 
 ### 1. Create a Firebase Project
 
-Go to https://console.firebase.google.com
+Go to [Firebase Console](https://console.firebase.google.com)
 .
 
 Click Add project.
@@ -83,12 +83,14 @@ In your Next.js project root, create a file called .env.local.
 
 Paste the config values you got when registering your Firebase app:
 
+```bash
 NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
 NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
 NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
 NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+```
 
 ### 6. Setup Firebase in Code
 
@@ -96,6 +98,7 @@ In the root of your Next.js project, create a file called firebase.js.
 
 Add the following code:
 
+```bash
 // firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
@@ -115,3 +118,4 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const provider = new GoogleAuthProvider();
 export const db = getFirestore(app);
+```
