@@ -2,13 +2,8 @@
 import { createContext, useEffect, useState, useContext } from "react";
 import { auth } from "@/firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-// import { HeadLinks } from "@/components/HeadLinks";
 import "./globals.css";
 
-// export const metadata = {
-//   title: "Todo App",
-//   description: `Created with 💖 by rsp `,
-// };
 
 const AuthContext = createContext();
 
@@ -19,7 +14,7 @@ export function useAuth() {
 export default function RootLayout({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-
+  
   useEffect(() => {
     // Listen for changes (login/logout/refresh)
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
@@ -29,7 +24,7 @@ export default function RootLayout({ children }) {
 
     return () => unsubscribe();
   }, []);
-
+  
   const logout = () => signOut(auth);
 
   return (
@@ -48,6 +43,12 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+
+// export const metadata = {
+//   title: "Todo App",
+//   description: `Created with 💖 by rsp `,
+// };
 
 // export default function RootLayout({ children }) {
 //   return (
