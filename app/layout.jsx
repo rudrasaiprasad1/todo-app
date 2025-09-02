@@ -18,20 +18,31 @@ export function useAuth() {
 
 export default function RootLayout({ children }) {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (currentUser) =>
-      setUser(currentUser)
-    );
-    return () => unsub();
+    // Listen for changes (login/logout/refresh)
+    const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+      setUser(firebaseUser);
+      setLoading(false);
+    });
+
+    return () => unsubscribe();
   }, []);
+
+  const logout = () => signOut(auth);
 
   return (
     <html lang="en">
-      {/* <HeadLinks /> */}
       <body>
-        <AuthContext.Provider value={{ user, logout: () => signOut(auth) }}>
-          {children}
+        <AuthContext.Provider value={{ user, logout, loading }}>
+          {loading ? (
+            <div className="flex h-screen items-center justify-center">
+              <p>Loading...</p>
+            </div>
+          ) : (
+            children
+          )}
         </AuthContext.Provider>
       </body>
     </html>
