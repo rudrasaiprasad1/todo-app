@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { db } from "@/firebase/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import { useAuth } from "./AuthProvider";
+import { db } from "@/firebase";
 
 export default function AddTodo() {
   const [text, setText] = useState("");
@@ -30,7 +30,10 @@ export default function AddTodo() {
         placeholder="Add todo..."
         className="border p-2 rounded w-full"
       />
-      <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
+      <button
+        type="submit"
+        className="bg-blue-500 text-white px-4 py-2 rounded"
+      >
         Add
       </button>
     </form>
