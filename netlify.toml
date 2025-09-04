@@ -2,9 +2,8 @@
   command = "npm install --force && npm run build"
   publish = ".next"
 
-
-
-
-
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[[plugins]]
+  package = "@netlify/next"

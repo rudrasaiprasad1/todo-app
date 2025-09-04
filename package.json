@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "TAILWIND_DISABLE_OXIDE=1 next build",
     "start": "next start",
-    "lint": "next lint",
-    "build": "TAILWIND_DISABLE_OXIDE=1 next build"
+    "lint": "next lint"
   },
   "dependencies": {
     "@tailwindcss/oxide": "^4.1.13",
@@ -19,6 +18,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@netlify/next": "^1.4.9",
     "@netlify/plugin-nextjs": "^5.13.0",
     "@tailwindcss/postcss": "^4.1.8",
     "autoprefixer": "^10.4.21",
