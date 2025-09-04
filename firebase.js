@@ -12,21 +12,7 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-
-
-
-
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const provider = new GoogleAuthProvider();
 export const db = getFirestore(app);
-
-// Your web app's Firebase configuration
-// const firebaseConfig = {
-//   apiKey: "AIzaSyC0lB-rqD9u617w4Ulsw0Dt-tHi_-IxadQ",
-//   authDomain: "nextjs-todoapp-782fa.firebaseapp.com",
-//   projectId: "nextjs-todoapp-782fa",
-//   storageBucket: "nextjs-todoapp-782fa.firebasestorage.app",
-//   messagingSenderId: "143231936308",
-//   appId: "1:143231936308:web:8fdda2fb2a8a1783f1a761"
-// };
