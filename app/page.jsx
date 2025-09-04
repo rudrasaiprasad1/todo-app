@@ -18,12 +18,6 @@ export default function Home() {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
 
-  if (!user) {
-    return (
-      <p className="text-center mt-10">Please log in to see your todos.</p>
-    );
-  }
-
   useEffect(() => {
     if (!user) {
       router.push("/login");
@@ -57,7 +51,6 @@ export default function Home() {
   };
 
   if (!user) return null;
-
   return (
     <div className="p-6 max-w-lg mx-auto">
       <div className="flex justify-between mb-4">
