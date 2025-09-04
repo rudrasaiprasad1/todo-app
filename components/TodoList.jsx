@@ -9,6 +9,7 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 import { useAuth } from "./AuthProvider";
+import { db } from "@/firebase";
 
 export default function TodoList() {
   const [todos, setTodos] = useState([]);
